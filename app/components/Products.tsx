@@ -25,7 +25,7 @@ const products = [
     slug: "quartz-stone-slab",
     description: "Engineered quartz that resembles granite, unaffected by stains, scratches, and cracks",
     variants: ["Calcatta Neoleth", "Calcatta Gioa", "Statuario Fantastico", "Nero Marquina"],
-    image: "/sat-quartz.jpg",
+    image: "/products/stone.png",
   },
   {
     id: 3,
@@ -35,7 +35,7 @@ const products = [
     slug: "premium-blinds",
     description: "Control light, privacy, and mood with sleek blinds",
     variants: ["Roller", "Venetian (Wood/Aluminium)", "Zebra (Day-Night)", "Honeycomb/Cellular"],
-    image: "/placeholder.svg?height=250&width=350&text=Premium+Blinds",
+    image: "/products/blinds.png",
   },
   {
     id: 4,
@@ -45,7 +45,7 @@ const products = [
     slug: "awnings",
     description: "Protective coverings for shade and shelter, enhancing comfort and energy efficiency",
     variants: ["Pergola Awnings", "Retractable (Manual/Motorized)", "Canopy Awnings", "Fixed Awnings"],
-    image: "/placeholder.svg?height=250&width=350&text=Awnings",
+    image: "/products/awnings.png",
   },
   {
     id: 5,
@@ -55,7 +55,7 @@ const products = [
     slug: "wooden-flooring",
     description: "Timeless, natural aesthetic with warmth and durability",
     variants: ["Wood Series", "Stone Series", "Modern Series", "Herringbone Series"],
-    image: "/placeholder.svg?height=250&width=350&text=Wooden+Flooring",
+    image: "/products/floorings.png",
   },
   {
     id: 6,
@@ -65,7 +65,7 @@ const products = [
     slug: "premium-decking",
     description: "Combines aesthetic appeal of exotic hardwoods with composite durability",
     variants: ["Driftwood", "Silverwood", "Dunewood", "Ironwood"],
-    image: "/placeholder.svg?height=250&width=350&text=Premium+Decking",
+    image: "/products/decking.png",
   },
   {
     id: 7,
@@ -75,7 +75,7 @@ const products = [
     slug: "curtain-rods",
     description: "Functional and decorative fixtures for hanging curtains",
     variants: ["Single/Double Rods", "Track Curtain System", "Extendable Rods", "Motorized Rods"],
-    image: "/placeholder.svg?height=250&width=350&text=Curtain+Rods",
+    image: "/products/curt.png",
   },
   {
     id: 8,
@@ -85,7 +85,7 @@ const products = [
     slug: "outdoor-blinds",
     description: "Weather-resistant blinds for outdoor spaces",
     variants: ["Roll up Bamboo", "Zip Track", "PVC Outdoor", "Outdoor Roman"],
-    image: "/placeholder.svg?height=250&width=350&text=Outdoor+Blinds",
+    image: "/products/deck-blinds.png",
   },
   {
     id: 9,
@@ -95,7 +95,7 @@ const products = [
     slug: "specialty-flooring",
     description: "Eco-friendly and durable flooring solutions",
     variants: ["WPC Decking", "Artificial Grass", "PVC Deck Tiles", "Natural Wood (Teak/IPE)"],
-    image: "/placeholder.svg?height=250&width=350&text=Specialty+Flooring",
+    image: "/products/deck-floorig.png",
   },
   {
     id: 10,
@@ -105,7 +105,7 @@ const products = [
     slug: "wall-panelling",
     description: "Enhances interior walls with added texture and depth",
     variants: ["Wood Veneer", "3D Panels", "MDF Panels", "Acoustic Panels", "PVC Panels", "Fabric-Wrapped Panels"],
-    image: "/placeholder.svg?height=250&width=350&text=Wall+Panelling",
+    image: "/products/wall-panel.png",
   },
   {
     id: 11,
@@ -115,7 +115,7 @@ const products = [
     slug: "upvc-doors",
     description: "Excellent durability, thermal insulation, and low maintenance",
     variants: ["Casement", "Lift & Slide", "Sliding", "Folding"],
-    image: "/placeholder.svg?height=250&width=350&text=UPVC+Doors",
+    image: "/products/upvc-door.png",
   },
   {
     id: 12,
@@ -125,7 +125,7 @@ const products = [
     slug: "upvc-windows",
     description: "Weather-resistant, corrosion-proof, and noise-reducing windows",
     variants: ["Casement", "Tilt & Turn", "Sliding", "Villa Window"],
-    image: "/placeholder.svg?height=250&width=350&text=UPVC+Windows",
+    image: "/products/upvc-windows.png",
   },
 ]
 
@@ -139,27 +139,27 @@ export default function Products() {
     <section id="products" className="section-padding bg-[var(--cream)]">
       <div className="container mx-auto px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32">
         <motion.h2
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.2 }}
           className="section-title"
         >
           Our Premium Products
         </motion.h2>
 
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
+          transition={{ duration: 0.2, delay: 0.1 }}
           className="text-center text-content text-lg mb-8 max-w-3xl mx-auto"
         >
           We curate premium products from leading brands like Vista, Home Shanti, Kaara, Argil, Adwin & Deck
         </motion.p>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
+          transition={{ duration: 0.2, delay: 0.2 }}
           className="flex justify-center mb-12 flex-wrap gap-4"
         >
           {categories.map((category) => (
@@ -180,7 +180,7 @@ export default function Products() {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
+          transition={{ duration: 0.2, delay: 0.4 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
           {filteredProducts.map((product) => (

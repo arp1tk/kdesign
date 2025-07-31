@@ -10,18 +10,18 @@ export default function About() {
 
       <div className="container">
         <motion.h2
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.2 }}
           className="section-title text-[var(--burgundy)]"
         >
           About K Designs
         </motion.h2>
         <div className="flex flex-wrap items-center">
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
+            initial={{ opacity: 0, x: -10 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.2 }}
             className="w-full md:w-1/2 mb-10 md:mb-0"
           >
             <img
@@ -31,9 +31,9 @@ export default function About() {
             />
           </motion.div>
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
+            initial={{ opacity: 0, x: 10 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.2 }}
             className="w-full md:w-1/2 md:pl-10"
           >
             <p className="text-content text-lg mb-6">
@@ -48,7 +48,7 @@ export default function About() {
                   key={index}
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  transition={{ duration: 0.2, delay: index * 0.1 }}
                   className="flex items-center mb-2 text-content"
                 >
                   <svg

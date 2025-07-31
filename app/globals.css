@@ -46,7 +46,9 @@
     color: var(--burgundy);
     border: 1px solid var(--burgundy);
   }
-
+  .page-padding {
+    @apply px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32;
+  }
   .btn-secondary:hover {
     background-color: var(--sand);
   }

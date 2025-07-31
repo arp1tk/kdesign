@@ -7,14 +7,14 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 const testimonials = [
   {
     id: 1,
-    name: "Alice Johnson",
+    name: "Amit Verma ",
     role: "Homeowner",
     content: "K Designs transformed our house into a dream home with their innovative use of sustainable materials.",
     rating: 5,
   },
   {
     id: 2,
-    name: "Bob Brown",
+    name: "Karan Bhatia",
     role: "Business Owner",
     content:
       "We hired K Designs for our office redesign and the results were beyond our expectations. Their branding expertise is top-notch!",
@@ -22,7 +22,7 @@ const testimonials = [
   },
   {
     id: 3,
-    name: "Charlie Davis",
+    name: "Pooja Iyer",
     role: "Real Estate Agent",
     content:
       "I've worked with many interior designers, but K Designs stands out for their professionalism and eco-friendly designs.",
@@ -30,14 +30,14 @@ const testimonials = [
   },
   {
     id: 4,
-    name: "Diana Smith",
+    name: "Sneha Menon",
     role: "Architect",
     content: "Collaborating with K Designs on projects is always a pleasure. Their vision and execution are top-notch.",
     rating: 5,
   },
   {
     id: 5,
-    name: "Ethan White",
+    name: "Radhika Sharma",
     role: "Hotel Manager",
     content:
       "K Designs' redesign of our hotel lobby has received countless compliments from our guests. Exceptional work!",

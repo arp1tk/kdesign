@@ -3,8 +3,14 @@
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import { motion } from "framer-motion"
+import { Tangerine } from "next/font/google"
 
+const tangerine = Tangerine({
+  subsets: ['latin'],
+  weight: ['400'],
+})
 export default function Hero() {
+
   return (
     <section
       id="home"
@@ -30,7 +36,7 @@ export default function Hero() {
           </motion.div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight mb-6">
             <span className="text-white">Timeless Interiors,</span>{" "}
-            <span className="text-[var(--gold)]">Tailored for You</span>
+          <span className={`${tangerine.className}   text-[var(--gold)] text-8xl`}>Tailored for You</span>
           </h1>
           <p className="text-white/90 text-lg md:text-xl max-w-xl mx-auto mb-8">
             Premium interior solutions from leading brands. Creating comfort, functionality, and lasting impressions.

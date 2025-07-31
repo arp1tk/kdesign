@@ -48,9 +48,9 @@ export default function FAQ() {
     <section id="faq" className="section-padding bg-[var(--cream)]">
       <div className="container">
         <motion.h2
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.2 }}
           className="section-title"
         >
           Frequently Asked Questions
@@ -59,9 +59,9 @@ export default function FAQ() {
           {faqs.map((faq, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              transition={{ duration: 0.2, delay: index * 0.1 }}
               className="mb-4"
             >
               <button
@@ -81,7 +81,7 @@ export default function FAQ() {
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: "auto" }}
                     exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.3 }}
+                    transition={{ duration: 0.2 }}
                     className="mt-2 p-4 bg-white rounded-lg shadow-md"
                   >
                     <p className="text-[var(--wood)]">{faq.answer}</p>
