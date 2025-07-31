@@ -3,45 +3,50 @@
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import { ChevronLeft, ChevronRight } from "lucide-react"
-
+import Image from "next/image" 
 const testimonials = [
   {
     id: 1,
     name: "Amit Verma ",
     role: "Homeowner",
-    content: "K Designs transformed our house into a dream home with their innovative use of sustainable materials.",
+    content: "K Design transformed our house into a dream home with their innovative use of sustainable materials.",
     rating: 5,
+     image: "/test1.jpeg",
   },
   {
     id: 2,
     name: "Karan Bhatia",
     role: "Business Owner",
     content:
-      "We hired K Designs for our office redesign and the results were beyond our expectations. Their branding expertise is top-notch!",
+      "We hired K Design for our office redesign and the results were beyond our expectations. Their branding expertise is top-notch!",
     rating: 5,
+     image: "/test2.jpeg",
   },
   {
     id: 3,
     name: "Pooja Iyer",
     role: "Real Estate Agent",
     content:
-      "I've worked with many interior designers, but K Designs stands out for their professionalism and eco-friendly designs.",
+      "I've worked with many interior designers, but K Design stands out for their professionalism and eco-friendly designs.",
     rating: 5,
+     image: "/test3.jpeg",
   },
   {
     id: 4,
     name: "Sneha Menon",
     role: "Architect",
-    content: "Collaborating with K Designs on projects is always a pleasure. Their vision and execution are top-notch.",
+    content: "Collaborating with K Design on projects is always a pleasure. Their vision and execution are top-notch.",
     rating: 5,
+     image: "/test4.jpeg",
   },
   {
     id: 5,
     name: "Radhika Sharma",
     role: "Hotel Manager",
     content:
-      "K Designs' redesign of our hotel lobby has received countless compliments from our guests. Exceptional work!",
+      "K Design' redesign of our hotel lobby has received countless compliments from our guests. Exceptional work!",
     rating: 5,
+     image: "/test5.jpeg",
   },
 ]
 
@@ -102,9 +107,13 @@ export default function Testimonials() {
                     </div>
                     <p className="text-[var(--wood)] mb-4 italic">&ldquo;{testimonial.content}&rdquo;</p>
                     <div className="flex items-center">
-                      <div className="w-12 h-12 rounded-full bg-[var(--burgundy)] text-white flex items-center justify-center font-semibold text-lg mr-4">
-                        {getInitials(testimonial.name)}
-                      </div>
+                     <Image
+  src={testimonial.image}
+  alt={testimonial.name}
+  width={48}
+  height={48}
+  className="rounded-full object-cover mr-4"
+/>
                       <div>
                         <h4 className="font-semibold text-[var(--charcoal)]">{testimonial.name}</h4>
                         <p className="text-[var(--wood)] text-sm">{testimonial.role}</p>

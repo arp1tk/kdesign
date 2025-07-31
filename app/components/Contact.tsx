@@ -61,7 +61,7 @@ export default function Contact() {
           >
             <h3 className="text-2xl font-light mb-4 text-[var(--burgundy)]">Get in Touch</h3>
             <p className="text-content mb-6">
-              At K Designs, we believe in creating spaces that reflect your unique style and needs. Feel free to reach
+              At K Design, we believe in creating spaces that reflect your unique style and needs. Feel free to reach
               out to us for any inquiries or to discuss your next project.
             </p>
             <ul className="space-y-4">

@@ -15,7 +15,7 @@ export default function About() {
           transition={{ duration: 0.2 }}
           className="section-title text-[var(--burgundy)]"
         >
-          About K Designs
+          About K Design
         </motion.h2>
         <div className="flex flex-wrap items-center">
           <motion.div

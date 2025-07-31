@@ -6,9 +6,9 @@ import { motion, AnimatePresence } from "framer-motion"
 
 const faqs = [
   {
-    question: "What services does K Designs offer?",
+    question: "What services does K Design offer?",
     answer:
-      "K Designs specializes in curating premium interior design products and services including furniture, decor, and full-scale renovations for both residential and commercial spaces.",
+      "K Design specializes in curating premium interior design products and services including furniture, decor, and full-scale renovations for both residential and commercial spaces.",
   },
   {
     question: "How long does a typical project take?",
@@ -28,7 +28,7 @@ const faqs = [
   {
     question: "What brands do you work with?",
     answer:
-      "K Designs partners with a variety of premium brands to offer our clients the finest selection of interior design products.",
+      "K Design partners with a variety of premium brands to offer our clients the finest selection of interior design products.",
   },
   {
     question: "Do you offer product warranties?",
