@@ -1,14 +1,13 @@
 "use client"
 
-import { useState } from "react"
-import { ChevronDown, ChevronUp } from "lucide-react"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion } from "framer-motion"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion" // Import shadcn Accordion components
 
 const faqs = [
   {
-    question: "What services does K Design offer?",
+    question: "What services does K Designs offer?",
     answer:
-      "K Design specializes in curating premium interior design products and services including furniture, decor, and full-scale renovations for both residential and commercial spaces.",
+      "K Designs specializes in curating premium interior design products and services including furniture, decor, and full-scale renovations for both residential and commercial spaces.",
   },
   {
     question: "How long does a typical project take?",
@@ -28,7 +27,7 @@ const faqs = [
   {
     question: "What brands do you work with?",
     answer:
-      "K Design partners with a variety of premium brands to offer our clients the finest selection of interior design products.",
+      "K Designs partners with a variety of premium brands to offer our clients the finest selection of interior design products.",
   },
   {
     question: "Do you offer product warranties?",
@@ -42,55 +41,47 @@ const faqs = [
 ]
 
 export default function FAQ() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null)
-
   return (
     <section id="faq" className="section-padding bg-[var(--cream)]">
       <div className="container">
         <motion.h2
-          initial={{ opacity: 0, y: 10 }}
+          initial={{ opacity: 0, y: 5 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.2 }}
-          className="section-title"
+          transition={{ duration: 0.1 }}
+          className="section-title "
         >
           Frequently Asked Questions
         </motion.h2>
-        <div className="max-w-3xl mx-auto">
-          {faqs.map((faq, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.2, delay: index * 0.1 }}
-              className="mb-4"
-            >
-              <button
-                className="flex justify-between items-center w-full p-4 bg-white rounded-lg shadow-md focus:outline-none hover:bg-[var(--sand)] transition-colors duration-300"
-                onClick={() => setOpenIndex(openIndex === index ? null : index)}
-              >
-                <span className="font-semibold text-[var(--charcoal)]">{faq.question}</span>
-                {openIndex === index ? (
-                  <ChevronUp className="h-5 w-5 text-[var(--burgundy)]" />
-                ) : (
-                  <ChevronDown className="h-5 w-5 text-[var(--burgundy)]" />
-                )}
-              </button>
-              <AnimatePresence>
-                {openIndex === index && (
-                  <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: "auto" }}
-                    exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.2 }}
-                    className="mt-2 p-4 bg-white rounded-lg shadow-md"
-                  >
-                    <p className="text-[var(--wood)]">{faq.answer}</p>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </motion.div>
-          ))}
-        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 5 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.1, delay: 0.1 }}
+          className="max-w-3xl mx-auto"
+        >
+       <Accordion type="single" collapsible className="w-full">
+  {faqs.map((faq, index) => (
+    <motion.div
+      key={index}
+      initial={{ opacity: 0, y: 5 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.1, delay: index * 0.1 }}
+      className="mb-4" 
+    >
+      <AccordionItem value={`item-${index}`} className="border-b border-[var(--sand)]">
+        <AccordionTrigger className="flex justify-between items-center w-full p-6 bg-white rounded-lg shadow-md focus:outline-none hover:bg-[var(--sand)] transition-colors duration-300 text-left">
+          <span className="font-semibold text-sm text-[var(--charcoal)]">
+            {faq.question}
+          </span>
+        </AccordionTrigger>
+        <AccordionContent className="mt-2 px-6 py-4 bg-white rounded-lg shadow-md text-base"> 
+          <p className="text-[var(--wood)]">{faq.answer}</p>
+        </AccordionContent>
+      </AccordionItem>
+    </motion.div>
+  ))}
+</Accordion>
+
+        </motion.div>
       </div>
     </section>
   )
