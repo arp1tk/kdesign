@@ -165,13 +165,13 @@ export default function ProductDetail() {
               <h3 className="text-2xl font-light text-[var(--charcoal)] mb-6">Interested in this product?</h3>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
-                  href="tel:+919625351264"
+                  href="tel:+918851619320"
                   className="bg-[var(--burgundy)] text-white px-8 py-3 rounded-full hover:bg-[var(--dark-red)] transition-colors font-medium"
                 >
                   Call for Quote
                 </Link>
                 <Link
-                  href="#contact"
+                  href="/#contact"
                   className="bg-[var(--sand)] text-[var(--charcoal)] px-8 py-3 rounded-full hover:bg-[var(--gold)] transition-colors font-medium"
                 >
                   Send Inquiry
