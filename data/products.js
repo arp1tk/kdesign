@@ -15,11 +15,21 @@ export const products = [
         name: "Highland Black Veins",
         code: "1105",
         image: "/product-images/spc-flooring/black.jpg",
+        additionalImages: [
+          "/product-images/spc-flooring/black.jpg",
+          "/placeholder.svg?height=600&width=800&text=SPC+Black+Veins+2",
+          "/placeholder.svg?height=600&width=800&text=SPC+Black+Veins+3",
+        ],
       },
       {
         name: "Highland Grey Veins",
         code: "1104",
         image: "/product-images/spc-flooring/grey.jpg",
+        additionalImages: [
+          "/placeholder.svg?height=600&width=800&text=SPC+Black+Veins+1",
+          "/placeholder.svg?height=600&width=800&text=SPC+Black+Veins+2",
+          "/placeholder.svg?height=600&width=800&text=SPC+Black+Veins+3",
+        ],
       },
       {
         name: "Pedy Oak Golden Veins",
