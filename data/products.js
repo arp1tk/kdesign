@@ -17,7 +17,7 @@ export const products = [
         image: "/product-images/spc-flooring/black.jpg",
         additionalImages: [
           "/product-images/spc-flooring/black.jpg",
-          "/placeholder.svg?height=600&width=800&text=SPC+Black+Veins+2",
+          "/product-images/spc-flooring/grey.jpg",
           "/placeholder.svg?height=600&width=800&text=SPC+Black+Veins+3",
         ],
       },

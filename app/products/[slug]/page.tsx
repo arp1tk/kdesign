@@ -99,31 +99,34 @@ const [selectedImage, setSelectedImage] = useState("")
                         priority={index < 3} // preload first few images
                       />
                       {/* Explore More Photos button (appears on hover) */}
-                      {variant.additionalImages && variant.additionalImages.length > 0 && (
-                        <Dialog>
-                          <DialogTrigger asChild>
-                            <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer">
-                              <button className="flex items-center text-white px-4 py-2 rounded-full bg-[var(--burgundy)] hover:bg-[var(--dark-red)] transition-colors">
-                                <Maximize2 className="w-5 h-5 mr-2" />
-                                Explore More
-                              </button>
-                            </div>
-                          </DialogTrigger>
-                      <DialogContent className="max-w-6xl w-full h-full lg:h-[90vh] p-8 bg-white rounded-2xl shadow-2xl flex flex-col border border-gray-200">
-  <DialogHeader className="mb-6">
-    <DialogTitle className="text-3xl font-semibold text-[var(--charcoal)]">
-      More Photos of {variant.name}
-    </DialogTitle>
-    <DialogDescription className="text-base text-[var(--wood)] mt-1">
-      Click an image to view it in detail.
-    </DialogDescription>
-  </DialogHeader>
-
-  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 overflow-y-auto flex-grow pr-1.5 custom-scroll">
+                  {variant.additionalImages && variant.additionalImages.length > 0 && (
+  <Dialog>
+    <DialogTrigger asChild>
+      <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer">
+        <button className="flex items-center text-white px-4 py-2 rounded-full bg-[var(--burgundy)] hover:bg-[var(--dark-red)] transition-colors">
+          <Maximize2 className="w-5 h-5 mr-2" />
+          Explore More
+        </button>
+      </div>
+    </DialogTrigger>
+    
+    <DialogContent className="max-w-7xl w-[95vw] h-[95vh] p-4 sm:p-6 lg:p-8 bg-white rounded-2xl shadow-2xl flex flex-col border border-gray-200">
+      <DialogHeader className="mb-4 sm:mb-6 flex-shrink-0">
+        <DialogTitle className="text-xl sm:text-2xl lg:text-3xl font-semibold text-[var(--charcoal)]">
+          More Photos of {variant.name}
+        </DialogTitle>
+        <DialogDescription className="text-sm sm:text-base text-[var(--wood)] mt-1">
+          Click an image to view it in detail.
+        </DialogDescription>
+      </DialogHeader>
+      
+      <div className="flex-1 overflow-hidden">
+        <div className="h-full overflow-y-auto pr-2 custom-scroll">
+          <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6 pb-4">
             {variant.additionalImages.map((img, imgIdx) => (
               <div
                 key={imgIdx}
-                className="relative w-full aspect-[4/3] overflow-hidden rounded-xl border border-gray-200 shadow-md cursor-pointer"
+                className="relative w-full aspect-square sm:aspect-[4/3] overflow-hidden rounded-lg sm:rounded-xl border border-gray-200 shadow-md cursor-pointer group"
                 onClick={() => {
                   setSelectedImage(img)
                   setImageViewerOpen(true)
@@ -133,22 +136,26 @@ const [selectedImage, setSelectedImage] = useState("")
                   src={img || "/placeholder.svg"}
                   alt={`${variant.name} additional photo ${imgIdx + 1}`}
                   fill
-                  className="object-cover hover:scale-105 transition-transform duration-300"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  sizes="(max-width: 480px) 50vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                 />
+                
+              
               </div>
             ))}
           </div>
-</DialogContent>
+        </div>
+      </div>
+    </DialogContent>
+    
     <ImageViewerDialog
-        open={imageViewerOpen}
-        onOpenChange={setImageViewerOpen}
-        imageSrc={selectedImage}
-        alt={`Full view of ${variant.name}`}
-      />
-                        </Dialog>
-                        
-                      )}
+      open={imageViewerOpen}
+      onOpenChange={setImageViewerOpen}
+      imageSrc={selectedImage}
+      alt={`Full view of ${variant.name}`}
+    />
+  </Dialog>
+)}
                     </div>
                     <div className="text-center">
                       <h3 className="text-lg font-medium text-[var(--charcoal)] tracking-wide font-serif">
