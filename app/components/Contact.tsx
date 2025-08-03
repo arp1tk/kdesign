@@ -12,6 +12,11 @@ export default function Contact() {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
+    // Clear messages when user starts typing
+    if (successMessage || errorMessage) {
+      setSuccessMessage("")
+      setErrorMessage("")
+    }
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -28,14 +33,17 @@ export default function Contact() {
       })
 
       const data = await res.json()
+      
       if (res.ok) {
-        setSuccessMessage("Message sent successfully!")
+        setSuccessMessage("Message sent successfully! We'll get back to you soon.")
         setFormData({ name: "", email: "", message: "" })
       } else {
-        setErrorMessage(data.message || "Failed to send message.")
+        // Handle specific error messages from the API
+        setErrorMessage(data.message || "Failed to send message. Please try again.")
       }
     } catch (error) {
-      setErrorMessage("Something went wrong. Please try again.")
+      console.error('Contact form error:', error)
+      setErrorMessage("Network error. Please check your connection and try again.")
     } finally {
       setIsSubmitting(false)
     }
@@ -94,21 +102,23 @@ export default function Contact() {
           >
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-[var(--charcoal)]">
-                Name
+                Name *
               </label>
               <input
                 type="text"
                 id="name"
                 name="name"
                 required
+                minLength={2}
                 value={formData.name}
                 onChange={handleChange}
                 className="mt-1 block w-full rounded-md border-[var(--sand)] shadow-sm focus:border-[var(--burgundy)] focus:ring focus:ring-[var(--burgundy)] focus:ring-opacity-50"
+                placeholder="Your full name"
               />
             </div>
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-[var(--charcoal)]">
-                Email
+                Email *
               </label>
               <input
                 type="email"
@@ -118,31 +128,51 @@ export default function Contact() {
                 value={formData.email}
                 onChange={handleChange}
                 className="mt-1 block w-full rounded-md border-[var(--sand)] shadow-sm focus:border-[var(--burgundy)] focus:ring focus:ring-[var(--burgundy)] focus:ring-opacity-50"
+                placeholder="your.email@example.com"
               />
             </div>
             <div>
               <label htmlFor="message" className="block text-sm font-medium text-[var(--charcoal)]">
-                Message
+                Message *
               </label>
               <textarea
                 id="message"
                 name="message"
                 rows={4}
                 required
+                minLength={10}
                 value={formData.message}
                 onChange={handleChange}
                 className="mt-1 block w-full rounded-md border-[var(--sand)] shadow-sm focus:border-[var(--burgundy)] focus:ring focus:ring-[var(--burgundy)] focus:ring-opacity-50"
+                placeholder="Tell us about your project or inquiry..."
               ></textarea>
+              <p className="text-xs text-gray-500 mt-1">Minimum 10 characters</p>
             </div>
 
             {/* Status Messages */}
-            {successMessage && <p className="text-green-600 text-sm">{successMessage}</p>}
-            {errorMessage && <p className="text-red-600 text-sm">{errorMessage}</p>}
+            {successMessage && (
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="p-3 bg-green-50 border border-green-200 rounded-md"
+              >
+                <p className="text-green-700 text-sm">{successMessage}</p>
+              </motion.div>
+            )}
+            {errorMessage && (
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="p-3 bg-red-50 border border-red-200 rounded-md"
+              >
+                <p className="text-red-700 text-sm">{errorMessage}</p>
+              </motion.div>
+            )}
 
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="btn btn-primary w-full"
+              className="btn btn-primary w-full disabled:opacity-50 disabled:cursor-not-allowed"
               type="submit"
               disabled={isSubmitting}
             >
