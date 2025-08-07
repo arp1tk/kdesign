@@ -590,33 +590,68 @@ export const products = [
     variants: [
       {
         name: "Wood veener",
-        image: "/product-images/wall-panelling/wood.png",
-        additionalImages: ["/product-images/wall-panelling/wood.png"],
+        image: "/product-images/wall-panelling/wood_veener/wood.png",
+        additionalImages: ["/product-images/wall-panelling/wood_veener/wood.png"],
       },
       {
         name: "MDF Panels",
-        image: "/product-images/wall-panelling/mdf.png",
-        additionalImages: ["/product-images/wall-panelling/mdf.png"],
+        image: "/product-images/wall-panelling/mdf_panels/mdf-1.png",
+        additionalImages: [
+  "/product-images/wall-panelling/mdf_panels/mdf-2.png",
+  "/product-images/wall-panelling/mdf_panels/mdf-1.png",
+  "/product-images/wall-panelling/mdf_panels/mdf-3.png",
+  "/product-images/wall-panelling/mdf_panels/mdf-4.png",
+  "/product-images/wall-panelling/mdf_panels/mdf-5.png",
+],
       },
       {
         name: "PVC Panels",
-        image: "/product-images/wall-panelling/pvc.png",
-        additionalImages: ["/product-images/wall-panelling/pvc.png"],
+        image: "/product-images/wall-panelling/pvc_panels/pvc-1.png",
+        additionalImages: [
+   "/product-images/wall-panelling/pvc_panels/pvc-1.png",
+    "/product-images/wall-panelling/pvc_panels/pvc-2.png",
+     "/product-images/wall-panelling/pvc_panels/pvc-3.png",
+      "/product-images/wall-panelling/pvc_panels/pvc-4.png",
+       "/product-images/wall-panelling/pvc_panels/pvc-5.png",
+        "/product-images/wall-panelling/pvc_panels/pvc-6.png",
+],
       },
       {
         name: "3D Panels",
-        image: "/product-images/wall-panelling/3d.png",
-        additionalImages: ["/product-images/wall-panelling/3d.png"],
+        image: "/product-images/wall-panelling/3d_panels/3d-1.png",
+        additionalImages: [
+   "/product-images/wall-panelling/3d_panels/3d-1.png",
+    "/product-images/wall-panelling/3d_panels/3d-2.png",
+     "/product-images/wall-panelling/3d_panels/3d-3.png",
+      "/product-images/wall-panelling/3d_panels/3d-4.png",
+       "/product-images/wall-panelling/3d_panels/3d-5.png",
+],
       },
       {
         name: "Acoustic Panels",
-        image: "/product-images/wall-panelling/acoustic.png",
-        additionalImages: ["/product-images/wall-panelling/acoustic.png"],
+        image: "/product-images/wall-panelling/acoustic_panels/a-1.png",
+        additionalImages:  [
+   "/product-images/wall-panelling/acoustic_panels/a-1.png",
+    "/product-images/wall-panelling/acoustic_panels/a-2.png",
+     "/product-images/wall-panelling/acoustic_panels/a-3.png",
+      "/product-images/wall-panelling/acoustic_panels/a-4.png",
+       "/product-images/wall-panelling/acoustic_panels/a-5.png",
+],
       },
       {
         name: "Fabric-Wrapped Panels",
-        image: "/product-images/wall-panelling/fabric.png",
-        additionalImages: ["/product-images/wall-panelling/fabric.png"],
+        image: "/product-images/wall-panelling/fabric_wrapped_panels/f-1.png",
+        additionalImages: [
+ "/product-images/wall-panelling/fabric_wrapped_panels/f-1.png",
+"/product-images/wall-panelling/fabric_wrapped_panels/f-2.png",
+ "/product-images/wall-panelling/fabric_wrapped_panels/f-3.png",
+
+ "/product-images/wall-panelling/fabric_wrapped_panels/f-4.png",
+
+ "/product-images/wall-panelling/fabric_wrapped_panels/f-5.png",
+
+ "/product-images/wall-panelling/fabric_wrapped_panels/f-6.png",
+],
       },
     ],
     image: "/products/wall-panelling.png",
