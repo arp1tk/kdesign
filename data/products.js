@@ -54,19 +54,26 @@ export const products = [
         name: "Walden Oak Ash Veins",
         code: "1101",
         image: "/product-images/spc-flooring/oa.png",
-        additionalImages: ["/product-images/spc-flooring/oa.png"],
+        additionalImages: ["/product-images/spc-flooring/oa.png",
+  "/product-images/spc-flooring/oakAsh/oa.webp"
+],
       },
       {
         name: "Creek Oak White Veins",
         code: "1116",
         image: "/product-images/spc-flooring/ow.jpg",
-        additionalImages: ["/product-images/spc-flooring/ow.jpg"],
+        additionalImages: ["/product-images/spc-flooring/ow.jpg",
+  "/product-images/spc-flooring/oakWhite/ow.webp"
+],
       },
       {
         name: "Creek Oak Grey",
         code: "1117",
         image: "/product-images/spc-flooring/ogrey.jpg",
-        additionalImages: ["/product-images/spc-flooring/ogrey.jpg"],
+        additionalImages: ["/product-images/spc-flooring/ogrey.jpg",
+  "/product-images/spc-flooring/oakGrey/og-1.jpg",
+  "/product-images/spc-flooring/oakGrey/og-2.jpg"
+],
       },
     ],
     image: "/placeholder.svg?height=250&width=350&text=SPC+Flooring",
@@ -87,57 +94,98 @@ export const products = [
       {
         name: "Calcatta Neoleth",
         image: "/product-images/quartz-stone-slab/calcutta_neoleth/neoleth.jpg",
-        additionalImages: ["/product-images/quartz-stone-slab/calcutta_neoleth/neoleth.jpg"],
+        additionalImages: [
+  "/product-images/quartz-stone-slab/calcutta_neoleth/neoleth.jpg",
+  "/product-images/quartz-stone-slab/calcutta_neoleth/cn-1.webp",
+  "/product-images/quartz-stone-slab/calcutta_neoleth/cn-2.webp",
+  "/product-images/quartz-stone-slab/calcutta_neoleth/cn-3.webp",
+  "/product-images/quartz-stone-slab/calcutta_neoleth/cn-4.webp",
+
+
+],
       },
       {
         name: "Nero Marquina",
         image: "/product-images/quartz-stone-slab/nero_marquina/nero-marq.jpg",
-        additionalImages: ["/product-images/quartz-stone-slab/nero_marquina/nero-marq.jpg"],
+        additionalImages: [
+  "/product-images/quartz-stone-slab/nero_marquina/nero-marq.jpg",
+"/product-images/quartz-stone-slab/nero_marquina/nm-1.webp",
+"/product-images/quartz-stone-slab/nero_marquina/nm-2.webp",
+"/product-images/quartz-stone-slab/nero_marquina/nm-3.webp"],
       },
       {
         name: "Himalayan White",
         image: "/product-images/quartz-stone-slab/himalayan_white/himal-white.jpg",
-        additionalImages: ["/product-images/quartz-stone-slab/himalayan_white/himal-white.jpg"],
+        additionalImages: ["/product-images/quartz-stone-slab/himalayan_white/himal-white.jpg",
+  "/product-images/quartz-stone-slab/himalayan_white/hw-1.webp",
+  "/product-images/quartz-stone-slab/himalayan_white/hw-2.webp"
+],
       },
       {
         name: "Calcatta Belo",
         image: "/product-images/quartz-stone-slab/calcutta_belo/belo.jpg",
-        additionalImages: ["/product-images/quartz-stone-slab/calcutta_belo/belo.jpg"],
+        additionalImages: ["/product-images/quartz-stone-slab/calcutta_belo/belo.jpg",
+  "/product-images/quartz-stone-slab/calcutta_belo/cb-1.png",
+  "/product-images/quartz-stone-slab/calcutta_belo/cb-2.webp"
+],
       },
       {
-        name: "Calcatta Gioa",
+        name: "Calcatta Gioia",
         image: "/product-images/quartz-stone-slab/calcutta_gioa/gioia.jpg",
-        additionalImages: ["/product-images/quartz-stone-slab/calcutta_gioa/gioia.jpg"],
+        additionalImages: ["/product-images/quartz-stone-slab/calcutta_gioa/gioia.jpg",
+  "/product-images/quartz-stone-slab/calcutta_gioa/cg-2.jpg",
+  "/product-images/quartz-stone-slab/calcutta_gioa/cg-3.jpg",
+  "/product-images/quartz-stone-slab/calcutta_gioa/cg-1.webp"
+],
       },
       {
         name: "Calcatta Oro",
         image: "/product-images/quartz-stone-slab/calcutta_oro/oro.jpg",
-        additionalImages: ["/product-images/quartz-stone-slab/calcutta_oro/oro.jpg"],
+        additionalImages: ["/product-images/quartz-stone-slab/calcutta_oro/oro.jpg",
+  "/product-images/quartz-stone-slab/calcutta_oro/co-1.jpg",
+  "/product-images/quartz-stone-slab/calcutta_oro/co-2.jpg"
+],
       },
       {
         name: "Crema Marfil",
         image: "/product-images/quartz-stone-slab/crema_marfil/creama-marfil.jpg",
-        additionalImages: ["/product-images/quartz-stone-slab/crema_marfil/creama-marfil.jpg"],
+        additionalImages: ["/product-images/quartz-stone-slab/crema_marfil/creama-marfil.jpg",
+  "/product-images/quartz-stone-slab/crema_marfil/cm-1.jpg",
+  "/product-images/quartz-stone-slab/crema_marfil/cm-2.png"
+],
       },
       {
         name: "Glacier White",
         image: "/product-images/quartz-stone-slab/glacier_white/glaciar-white.jpg",
-        additionalImages: ["/product-images/quartz-stone-slab/glacier_white/glaciar-white.jpg"],
+        additionalImages: ["/product-images/quartz-stone-slab/glacier_white/glaciar-white.jpg",
+  "/product-images/quartz-stone-slab/glacier_white/gw-w.jpg"
+],
       },
       {
         name: "Statuario Fantastico",
         image: "/product-images/quartz-stone-slab/satuario_fantastico/statuario.jpg",
-        additionalImages: ["/product-images/quartz-stone-slab/satuario_fantastico/statuario.jpg"],
+        additionalImages: ["/product-images/quartz-stone-slab/satuario_fantastico/statuario.jpg",
+  "/product-images/quartz-stone-slab/satuario_fantastico/sf-1.png",
+  "/product-images/quartz-stone-slab/satuario_fantastico/sf-2.jpg"
+],
       },
       {
         name: "Black Night",
         image: "/product-images/quartz-stone-slab/black_night/black-night.jpg",
-        additionalImages: ["/product-images/quartz-stone-slab/black_night/black-night.jpg"],
+        additionalImages: [
+  "/product-images/quartz-stone-slab/black_night/black-night.jpg",
+"/product-images/quartz-stone-slab/black_night/bn-2.webp",
+"/product-images/quartz-stone-slab/black_night/bn-1.jpg",
+],
       },
       {
         name: "Calcatta Novus",
         image: "/product-images/quartz-stone-slab/calcutta_novus/novus.jpg",
-        additionalImages: ["/product-images/quartz-stone-slab/calcutta_novus/novus.jpg"],
+        additionalImages: ["/product-images/quartz-stone-slab/calcutta_novus/novus.jpg",
+  "/product-images/quartz-stone-slab/calcutta_novus/cn-1.webp",
+  "/product-images/quartz-stone-slab/calcutta_novus/cn-2.webp",
+  "/product-images/quartz-stone-slab/calcutta_novus/cn-3.webp"
+],
       },
     ],
     image: "/products/stone.png",
